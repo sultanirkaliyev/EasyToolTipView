@@ -116,6 +116,12 @@ public extension EasyTipView {
         let ev = EasyTipView(text: attributedText, preferences: preferences, delegate: delegate)
         ev.show(animated: animated, forView: view, withinSuperview: superview)
     }
+    
+    class func show(animated: Bool = true, forItem item: UIBarItem, withinSuperview superview: UIView? = nil, attributedText:  NSAttributedString, preferences: Preferences = EasyTipView.globalPreferences, delegate: EasyTipViewDelegate? = nil){
+        
+        let ev = EasyTipView(text: attributedText, preferences: preferences, delegate: delegate)
+        ev.show(animated: animated, forItem: item, withinSuperView: superview)
+    }
 
     // MARK:- Instance methods -
     
