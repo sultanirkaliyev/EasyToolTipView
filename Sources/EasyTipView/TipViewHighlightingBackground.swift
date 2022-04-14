@@ -68,8 +68,8 @@ final class TipViewHighlightingBackground: UIView {
         // for the radius of the circle either take the provided `circleRadius` value
         // or compute a radius so the circle has `circleMargin` distance from the corner of the view
         let viewFrame = viewToHighlight.superview?.convert(viewToHighlight.frame, to: self) ?? .zero
-        let width = viewFrame.width / 2
-        let height = viewFrame.height / 2
+        let width = viewFrame.width / 3
+        let height = viewFrame.height / 3
         let distanceToEdge = ((width * width) + (height * height)).squareRoot()
         let radius = circleRadius ?? distanceToEdge + circleMargin
 
