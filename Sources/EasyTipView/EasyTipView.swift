@@ -352,7 +352,7 @@ open class EasyTipView: UIView {
     
     fileprivate lazy var overlay: TipViewHighlightingBackground = {
         let background = TipViewHighlightingBackground(frame: UIScreen.main.bounds)
-        background.backgroundColor = preferences.highlighting.overlayColor
+        background.backgroundColor = preferences.highlighting.showsOverlay ? preferences.highlighting.overlayColor : UIColor.clear
         background.highlightingBackground = preferences.highlighting.circleColor
         background.alpha = 0
         background.circleRadius = preferences.highlighting.circleRadius
